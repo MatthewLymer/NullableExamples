@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NullableExamples.Caching.InMemory.DependencyInjection;
 
 namespace NullableExamples.NullableExamplesCli
 {
@@ -24,7 +25,7 @@ namespace NullableExamples.NullableExamplesCli
 
         private static void ConfigureServices(HostBuilderContext context, IServiceCollection services)
         {
-            
+            services.AddInMemoryAsyncCache();
         }
     }
 }
